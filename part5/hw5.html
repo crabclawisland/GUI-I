@@ -20,8 +20,61 @@
 
         <style>
             @import url(../css/styles.css);
-            @import url(https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,300italic);
+            @import url(../css/dyntext.css);
+            @import url(https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,600,300italic);
+            @import url(https://fonts.googleapis.com/css?family=Arvo:400,400italic,700);
         </style>
+
+  <!-- the following is from prof heines's code example https://teaching.cs.uml.edu/~heines/91.461/91.461-2015-16f/461-assn/FormattingText-v05.jsp -->
+
+        <!--
+   load jQuery library from the Google Content Delivery Network (CDN)
+   see http://encosia.com/3-reasons-why-you-should-let-google-host-jquery-for-you/
+   however, note that you obviously must be online for this to work
+   alternatively, you can download jQuery and store it locally from
+      http://jquery.com/download/
+        -->
+        <script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+
+        <!-- load the JSON file containing the text of Lincoln's Gettysburg address -->
+        <script type="text/javascript">
+            // this function will run after the body has been loaded
+            jQuery(document).ready(function () {
+                jQuery.get("text.json", function (data) {
+                    placeContent(data);
+                }, "json");
+            });
+        </script>
+
+        <!-- script to place JSON text in the placeholder on this page -->
+        <script type="text/javascript">
+            // N.B.  This version *does* apply the CSS.
+            function placeContent(story) {
+                var strContent = "";
+
+                // create dynamic content from JSON
+                strContent += "<h1 class='title'>" + story.title + "</h1>";
+                strContent += "<h2 class='author'> Written by " + story.author + "</h2>";
+                strContent += "<h3 class='origin'>" + story.origin + ": ";
+                strContent += "<span class='date'>" + story.date + "</span>" + "</h3>";
+
+                // loop through all the paragraphs and sentences
+                for (var para = 0; para < story.text.paragraphs.length; para++) {
+                    strContent += "<p class=\"firefox\">";
+                    for (var sent = 0; sent < story.text.paragraphs[para].length; sent++) {
+                        strContent += story.text.paragraphs[para][sent] + "&nbsp; " + "<br>";
+
+                    }
+                    strContent += "</p>";
+                }
+
+                // place dynamic content on page
+                // document.getElementById( "content" ).innerHTML = strContent ;
+                $("#dyntext").html(strContent);
+            }
+        </script>
+
+        <!-- end Heines's code and end al scripts -->
 
     </head>
     <body>
@@ -29,11 +82,10 @@
         <div class="sideBar boxLeft">
             <div>
                 <div style="vertical-align:top;text-align:center;">
-                    <img src="http://weblab.cs.uml.edu/~anevers/imgs/me_and_sam.jpg" alt="Sampson, a very sweet puppy, licks my face."/>
+                    <img src="http://weblab.cs.uml.edu/~anevers/imgs/MarysLetter.jpg" alt="Mary's Letter" height="150" width="150"/>
                 </div>
                 <ul class="nav">
                     <li class="nav"><a class="nav" href="../index.html">Index</a></li>
-                    <li class="nav"><a class="nav" href="../part4/hw4.html">HW4</a></li>
                     <li class="nav"><a class="nav" href="hw5.html">HW5</a></li>
                     <li class="nav"><a class="nav" href="../part6/hw6.html">HW6</a></li>
                     <li class="nav"><a class="nav" href="../contact.html">Contact</a></li>
@@ -44,9 +96,8 @@
         <div id="container">
             <div id="content">
                 <div class="post">
-
-                    <h1>Work In Progress...</h1>
-                    <p> WORK IN PROGRESS PAGE FOR HW5. </p>
+                    <!-- this text is added from script reading JSON file -->
+                         <div id="dyntext"></div>
 
                 </div>
             </div>
