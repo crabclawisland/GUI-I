@@ -4,7 +4,7 @@
     Author     : Alex Nevers
     alexandra_nevers@student.uml.edu
     Undergrad @ UML in GUI I       
-    Last edited on: 9/15/2015
+    Last edited on: 10/15/2015
     CSS Styles
 */
 
@@ -21,7 +21,7 @@ p {
     font-size: 12pt;
     font-family: 'Source Sans Pro', sans-serif;
     padding: 0 2px 0 2px ;
-    text-indent: 10px;
+  
 }
 
 blockquote {
