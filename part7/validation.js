@@ -9,6 +9,8 @@
  
  $(document).ready(function () {
 
+//ready the variables
+
                 var n1 = $('#n1').val();
                 var n2 = $('#n2').val();
                 var n3 = $('#n3').val();
@@ -18,8 +20,10 @@
                 n2 = parseInt(n2);
                 n3 = parseInt(n3);
                 n4 = parseInt(n4);
+//begin form validaation
 
                 $("#form").validate({
+                 //set all inputs to be required digits from 1 to 999
                     rules: {
                         n1: {
                             required: true,
@@ -49,7 +53,7 @@
                         (error).appendTo($(".errors"));
                     }   
                 });
-
+//do not refresh page, validate and submit to multiply
                 $("form").click("submit", function (e) {
                     e.preventDefault();
                     var isvalidate = $("#form").valid();
