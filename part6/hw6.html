@@ -9,19 +9,78 @@
             alexandra_nevers@student.uml.edu
             Undergrad @ UML in GUI I 
             Created On 9/18/2015
-            Last edited on: 9/8/2015
-            Placeholder page for HW6. 
+             Last edited on: 10/19/2015
+            Multiplication Table for HW6. 
         
         -->
 
         <title>
-            A.Nevers Index
+            A.Nevers HW6
         </title>
 
         <style>
-            @import url(/css/styles.css);
+            @import url(../css/styles.css);
             @import url(https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,300italic);
         </style>
+
+
+<script>
+            function Multiply() {
+  /* convert all fields to ints */
+
+                var p1 = parseInt(document.getElementById("n1").value);
+                var p2 = parseInt(document.getElementById("n2").value);
+                var p3 = parseInt(document.getElementById("n3").value);
+                var p4 = parseInt(document.getElementById("n4").value);
+
+                /* test if inputs are 0, negative, bigger than 999, or NaN (blank) */
+
+                if (p1 !== p1 || p1 < 1 || p1 > 999 ||
+                        p2 !== p2 || p2 < 1 || p2 > 999 ||
+                        p3 !== p3 || p3 < 1 || p3 > 999 ||
+                        p4 !== p4 || p4 < 1 || p4 > 999) {
+
+                    alert("Please enter a number between 1 and 999 for all fields.");
+                    /* alert to reenter numbers, or continue to mult table */
+
+                } else {
+                    /*reprint the table with headings and multiplications */
+                    document.getElementById("multtable").innerHTML =
+                            "<table><tr><th>&nbsp;</th>" +
+                            "<th>" + p1 +
+                            "</th><th>" + p2 +
+                            "</th><th>" + p3 +
+                            "</th><th>" + p4 +
+                            "</th></tr>" +
+                            "<tr><th scope='row'>" + p1 +
+                            "</th><td>" + (p1 * p1) +
+                            "</th><td>" + (p1 * p2) +
+                            "</th><td>" + (p1 * p3) +
+                            "</th><td>" + (p1 * p4) +
+                            "</td></tr>" +
+                            "<tr><th scope='row'>" + p2 +
+                            "</th><td>" + (p2 * p1) +
+                            "</th><td>" + (p2 * p2) +
+                            "</th><td>" + (p2 * p3) +
+                            "</th><td>" + (p2 * p4) +
+                            "</td></tr>" +
+                            "<tr><th scope='row'>" + p3 +
+                            "</th><td>" + (p3 * p1) +
+                            "</th><td>" + (p3 * p2) +
+                            "</th><td>" + (p3 * p3) +
+                            "</th><td>" + (p3 * p4) +
+                            "</td></tr>" +
+                            "<tr><th scope='row'>" + p4 +
+                            "</th><td>" + (p4 * p1) +
+                            "</th><td>" + (p4 * p2) +
+                            "</th><td>" + (p4 * p3) +
+                            "</th><td>" + (p4 * p4) +
+                            "</td></tr>" +
+                            "</table>";
+                }
+            }
+        </script>
+
 
     </head>
 
@@ -30,15 +89,14 @@
         <div class="sideBar boxLeft">
             <div>
                 <div style="vertical-align:top;text-align:center;">
-                    <img src="http://weblab.cs.uml.edu/~anevers/imgs/me_and_sam.jpg" alt="Sampson, a very sweet puppy, licks my face."/>
+                    <img src="http://weblab.cs.uml.edu/~anevers/imgs/pumpkin.jpg" alt="Sampson, a very sweet puppy, licks my face."/>
                 </div>
 
                 <ul class="nav">
-                    <li class="nav"><a class="nav" href="/index.html">Index</a></li>
-                    <li class="nav"><a class="nav" href="/part4/hw4.html">HW4</a></li>
-                    <li class="nav"><a class="nav" href="/part5/hw5.html">HW5</a></li>
+                    <li class="nav"><a class="nav" href="../index.html">Index</a></li>
+                    <li class="nav"><a class="nav" href="../part5/hw5.html">HW5</a></li>
                     <li class="nav"><a class="nav" href="hw6.html">HW6</a></li>
-                    <li class="nav"><a class="nav" href="/contact.html">Contact</a></li>
+                    <li class="nav"><a class="nav" href="../contact.html">Contact</a></li>
                 </ul>
             </div>
         </div>
@@ -46,9 +104,73 @@
         <div id="container">
             <div id="content">
                 <div class="post">
+  <h1>Multiplication Table</h1>
 
-                    <h1>Work In Progress...</h1>
-                    <p> WORK IN PROGRESS PAGE FOR HW6. </p>
+                    <!-- Form for getting user entered numbers -->
+
+                    <form>
+                        <p>Number 1:
+                            <input type="number" id="n1" min="1" max="999" value="1">
+
+                            Number 2: 
+                            <input type="number" id="n2" min="1" max="999" value="2">
+                            <br>
+                            Number 3: 
+                            <input type="number" id="n3" min="1" max="999" value="3">
+
+                            Number 4: 
+                            <input type="number" id="n4" min="1" max="999" value="4">
+                        </p>
+                        <input type="button" id="formSubmit" onclick="Multiply()" value="Submit">
+                    </form>
+                    <br>
+
+                    <!-- placeholder multiplication table  -->
+
+                    <div id="error"></div>
+
+                    <div id="multtable"> 
+                        <table>
+                            <tr>
+                                <th>&nbsp;</th>
+                                <th>1</th>
+                                <th>2</th>
+                                <th>3</th>
+                                <th>4</th>
+                            </tr>
+                            <tr>
+                                <th scope="row"> 1 </th>
+                                <td>1</td>
+                                <td>2</td>
+                                <td>3</td>
+                                <td>4</td>
+                            </tr>
+                            <tr>
+                                <th scope="row"> 2 </th>
+                                <td>2</td>
+                                <td>4</td>
+                                <td>6</td>
+                                <td>8</td>
+                            </tr>
+                            <tr>
+                                <th scope="row"> 3 </th>
+                                <td>3</td>
+                                <td>6</td>
+                                <td>9</td>
+                                <td>12</td>
+                            </tr>
+                            <tr>
+                                <th scope="row"> 4 </th>
+                                <td>4</td>
+                                <td>8</td>
+                                <td>12</td>
+                                <td>16</td>
+                            </tr>
+                        </table>
+                    </div>
+                    <br>
+
+                    <!--end multiplication table -->
 
                 </div>
             </div>

@@ -1,0 +1,30 @@
+/* 
+    Created on : Oct 2, 2015, 4:13:04 PM
+    Author     : Alex Nevers
+    alexandra_nevers@student.uml.edu
+    Undergrad @ UML in GUI I       
+    Last edited on: 10/2/2015
+    CSS Styles for hw 5
+*/
+
+/* set font for headings */
+.title, .author, .origin, .date { font-family: 'Arvo', serif;}
+
+/*set decreasing font size and weights for headngs */
+
+.title { font-size: 18pt;
+         font-weight: 700;}
+
+.author { font-size: 15pt;
+          font-weight: 400;}
+
+.origin, .date{ font-weight: 400;
+                font-style: italic;
+                font-size: 13pt;
+                color: #B89393;}
+
+/*this is a poem, so center verses frorthis page */
+
+p { padding-top: 10px;
+    font-family: 'Arvo', serif;
+    text-align: center ; }
