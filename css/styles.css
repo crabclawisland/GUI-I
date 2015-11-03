@@ -114,6 +114,13 @@ a:hover:not(.nav), a:active:not(.nav) {
 /*  css for sticky footer is from http://www.lwis.net/journal/2008/02/08/pure-css-sticky-footer/ tutorial 
 */
 
+.errors{
+    font-size: 12pt;
+    font-family: 'Source Sans Pro', sans-serif;
+    font-style: italic ;
+    color: black ;
+}
+
 html, body, #container {
 height: 100%;
 margin: 0;
