@@ -25,59 +25,7 @@
         <script src="http://jqueryvalidation.org/files/dist/jquery.validate.min.js"></script>
         <script src="http://jqueryvalidation.org/files/dist/additional-methods.min.js"></script>
         <script src="table.js"></script>
-        <script>
-            $(document).ready(function () {
-
-                var n1 = $('#n1').val();
-                var n2 = $('#n2').val();
-                var n3 = $('#n3').val();
-                var n4 = $('#n4').val();
-
-                n1 = parseInt(n1);
-                n2 = parseInt(n2);
-                n3 = parseInt(n3);
-                n4 = parseInt(n4);
-
-                $("#form").validate({
-                    rules: {
-                        n1: {
-                            required: true,
-                            digits: true,
-                            maxlength: 3
-                        },
-                        n2: {
-                            required: true,
-                            digits: true,
-                            maxlength: 3
-                        },
-                        n3: {
-                            required: true,
-                            digits: true,
-                            maxlength: 3
-                        },
-                        n4: {
-                            required: true,
-                            digits: true,
-                            maxlength: 3
-                        }
-                    },
-                    groups: {
-                        numbers: "n1 n2 n3 n4"
-                    },
-                    errorPlacement: function (error, element) {
-                        (error).appendTo($(".errors"));
-                    }   
-                });
-
-                $("form").click("submit", function (e) {
-                    e.preventDefault();
-                    var isvalidate = $("#form").valid();
-                    if (isvalidate) {
-                        Multiply();
-                    }
-                });
-            });
-        </script>
+        <script src="validation.js"></script>
 
     </head>
 
@@ -86,15 +34,15 @@
         <div class="sideBar boxLeft">
             <div>
                 <div style="vertical-align:top;text-align:center;">
-                    <img src="http://weblab.cs.uml.edu/~anevers/imgs/pumpkin.jpg" alt="Sampson, a very sweet puppy, licks my face."/>
+                    <img src="http://weblab.cs.uml.edu/~anevers/imgs/pumpkin.jpg"/>
                 </div>
 
                 <ul class="nav">
-                    <li class="nav"><a class="nav" href="/~anevers/index.html">Index</a></li>
-                    <li class="nav"><a class="nav" href="/~anevers/part5/hw5.html">HW5</a></li>
-                    <li class="nav"><a class="nav" href="/~anevers/part6/hw6.html">HW6</a></li>
-                    <li class="nav"><a class="nav" href="/~anevers/part7/hw4.html">HW7</a></li>
-                    <li class="nav"><a class="nav" href="/~anevers/contact.html">Contact</a></li>
+                    <li class="nav"><a class="nav" href="../index.html">Index</a></li>
+                    <li class="nav"><a class="nav" href="../part5/hw5.html">HW5</a></li>
+                    <li class="nav"><a class="nav" href="../part6/hw6.html">HW6</a></li>
+                    <li class="nav"><a class="nav" href="hw4.html">HW7</a></li>
+                    <li class="nav"><a class="nav" href="../contact.html">Contact</a></li>
                 </ul>
             </div>
         </div>
