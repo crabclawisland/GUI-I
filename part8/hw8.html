@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <meta charset="UTF-8">
+
+        <!--
+            Alexandra Nevers
+            alexandra_nevers@student.uml.edu
+            Undergrad @ UML in GUI I 
+            Created On 11/10/2015
+            Last edited on: 11/19/2015
+            Multiplication Table for HW8, w/jquery validator tabs and sliders
+        
+        -->
+
+        <title>
+            A.Nevers HW8
+        </title>
+
+        <link href='http://ajax.googleapis.com/ajax/libs/jqueryui/1.8/themes/base/jquery-ui.css' rel='stylesheet' type='text/css'>
+        <link rel="stylesheet" type="text/css" href="/~anevers/css/styles.css" media="screen" />
+        <link rel="stylesheet" type="text/css" href="/~anevers/css/slider.css" media="screen" />
+
+        <style>            
+            @import url(https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,300italic);
+        </style>
+
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+        <script src="http://jqueryvalidation.org/files/dist/jquery.validate.min.js"></script>
+        <script src="http://jqueryvalidation.org/files/dist/additional-methods.min.js"></script>
+        <script src="https://code.jquery.com/ui/jquery-ui-git.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.15/angular.min.js"></script>
+
+        <script src="table.js"></script>
+        <script src="validation.js"></script>
+        <script src="slider.js"></script>
+        <script src="tabs.js"></script>
+    </head>
+
+    <body>
+
+        <div class="sideBar boxLeft">
+            <div>
+                <div style="vertical-align:top;text-align:center;">
+                </div>
+
+                <ul class="nav">
+                    <li class="nav"><a class="nav" href="/~anevers/index.html">Index</a></li>
+                    <li class="nav"><a class="nav" href="/~anevers/part5/hw5.html">HW5</a></li>
+                    <li class="nav"><a class="nav" href="/~anevers/part6/hw6.html">HW6</a></li>
+                    <li class="nav"><a class="nav" href="/~anevers/part7/hw4.html">HW7</a></li>
+                    <li class="nav"><a class="nav" href="/~anevers/part8/hw8.html">HW8</a></li>
+                    <li class="nav"><a class="nav" href="/~anevers/contact.html">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <div id="container">
+            <div id="content">
+                <div class="post">
+
+                    <h1>Multiplication Table</h1>
+
+                    <!-- Form for getting user entered numbers -->
+
+                    <form id="form" method="GET">
+                        <label>Number 1:</label>
+                        <input type="number" name="n1" id="n1" min="1" max="999" value="1">
+                        <div id="slider"> </div>
+
+                        <br>
+                        <label>Number 2: </label>
+                        <input type="number" name="n2" id="n2" min="1" max="999" value="2">
+                        <div id="slider2"> </div>
+
+                        <br>
+                        <label>Number 3: </label>
+                        <input type="number"  name="n3" id="n3" min="1" max="999" value="3">
+                        <div id="slider3"> </div>
+
+                        <br>
+                        <label>Number 4: </label>
+                        <input type="number" name="n4" id="n4" min="1" max="999" value="4" >
+                        <div id="slider4" > </div>
+
+                        <br>
+                        <input type="button" id="addtab" onClick="Addtab()" value="Save Table">
+
+                        <div class="errors"> &nbsp; </div>
+                    </form>
+                    <br>
+
+                    <!-- Tab interface -->
+
+                    <div id="tabs">
+
+                        <ul id="tablist">
+                            <li><a href="#tab1">Table 1</a><span class="ui-icon ui-icon-circle-close ui-closable-tab"></span></li>
+                        </ul>
+
+                        <div id="tab1">
+
+                            <!-- placeholder multiplication table  -->
+
+                            <div id="multtable1"> 
+                                <table>
+                                    <tr>
+                                        <th>&nbsp;</th>
+                                        <th>1</th>
+                                        <th>2</th>
+                                        <th>3</th>
+                                        <th>4</th>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row"> 1 </th>
+                                        <td>1</td>
+                                        <td>2</td>
+                                        <td>3</td>
+                                        <td>4</td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row"> 2 </th>
+                                        <td>2</td>
+                                        <td>4</td>
+                                        <td>6</td>
+                                        <td>8</td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row"> 3 </th>
+                                        <td>3</td>
+                                        <td>6</td>
+                                        <td>9</td>
+                                        <td>12</td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row"> 4 </th>
+                                        <td>4</td>
+                                        <td>8</td>
+                                        <td>12</td>
+                                        <td>16</td>
+                                    </tr>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                    <br>
+                    <!--end multiplication table -->
+
+                </div>
+            </div>
+        </div>
+
+        <div id="footer"> &copy; copyright 2015 Alex Nevers, all rights reserved. 
+        </div>
+
+    </body>
+</html>
