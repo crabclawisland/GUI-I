@@ -1,0 +1,36 @@
+
+/* 
+    Created on : Nov 11, 2015, 4:13:04 PM
+    Author     : Alex Nevers
+    alexandra_nevers@student.uml.edu
+    Undergrad @ UML in GUI I       
+    Last edited on: 111/17/2015
+    CSS Styles for custom slider
+*/
+
+form {
+    color: black;
+    text-align: left;
+    font-size: 12pt;
+    font-family: 'Source Sans Pro', sans-serif;
+    padding: 2px 2px 2px 2px ;
+
+}
+
+label {
+    color: black;
+    text-align: left;
+    font-size: 12pt;
+    font-family: 'Source Sans Pro', sans-serif;
+    padding: 2px 2px 10px 2px ;
+    display: inline-block ;
+}
+
+
+#slider, #slider2, #slider3, #slider4 {
+    display: inline-block ;
+    width: 100px;
+    left: 20px;
+    top: 2px;
+    
+}
