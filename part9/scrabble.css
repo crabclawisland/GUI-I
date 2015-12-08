@@ -1,0 +1,30 @@
+/* 
+Css for scrabble stuff
+alex nevers
+*/
+
+
+#board {
+    //padding: 0 0 0 0;
+    //margin: 0 ;
+    //float: left;
+    display: block;
+    font-size: 0;
+    border-color: black ;
+    border-width: 2px;
+ //   text-align: center;
+}
+
+#rack{
+    
+    //text-align: center ;
+    display: inline ;
+}
+
+.draggable, .droppable {
+   // text-align: center;
+    display: inline-block ;
+   // padding: 0 0 0 0 ;
+    //margin: 0 0 0 0 ;
+}
+

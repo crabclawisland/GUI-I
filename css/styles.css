@@ -10,7 +10,7 @@
 
 body {
     background-color: white;
-    background-image: url("http://weblab.cs.uml.edu/~anevers/imgs/upfeathers.png")
+    background-image: url("http://weblab.cs.uml.edu/~anevers/imgs/tree_bark.png")
 }
 
 /* background image from www.subtlepatterns.com */
@@ -61,17 +61,17 @@ h1 {
 
 .sideBar {
     position: fixed;
-    z-index: 500;
+    z-index: 250;
 }
 .sideBar.boxLeft {
-    width: 200px;
+    width: 150px;
     float:left;
-    padding: 20px 10px 10px 10px;
+    padding: 10px 10px 10px 10px;
     left:75px;
-    background-color: #E5E0DA;
+    background-color: #E6E6E6;
     top:10%;
     opacity: .9;
-    border-radius: 25px;
+    border-radius: 20px;
     border: 1px solid white ;
 }
 /* end sidebar */
@@ -88,11 +88,11 @@ ul.nav {
     display: inline ;
 }
 li.nav {
-    padding: 0 0px 0 40px ;
+    padding: 0 0px 0 16px ;
 }
 a.nav:link, a.nav:visited {
     display: block;
-    width: 120px;
+    width: 110px;
     color: #FFFFFF;
     background-color: #E6B8B8;
     text-align: center;
@@ -136,7 +136,7 @@ min-height: 100%;
 }
 
 #content {
-padding-left: 370px;
+padding-left: 320px;
 padding-right: 75px;
 padding-top: 60px;
 padding-bottom: 70px;

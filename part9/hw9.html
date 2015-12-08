@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <meta charset="UTF-8">
+
+        <!--
+            Alexandra Nevers
+            alexandra_nevers@student.uml.edu
+            Undergrad @ UML in GUI I 
+            Created On 11/24/2015
+            Last edited on: 12/8/2015
+            Scrabble page for hw9 
+        
+        -->
+
+        <title>
+            A.Nevers HW9
+        </title>
+        <link href='http://ajax.googleapis.com/ajax/libs/jqueryui/1.8/themes/base/jquery-ui.css' rel='stylesheet' type='text/css'>
+        <link rel="stylesheet" type="text/css" href="/~anevers/css/styles.css" media="screen" />
+        <link rel="stylesheet" type="text/css" href="/~anevers/css/slider.css" media="screen" />
+        <link rel="stylesheet" type="text/css" href="scrabble.css" media="screen" />
+        <style>            
+            @import url(https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,300italic);
+        </style>
+
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+        <script src="http://jqueryvalidation.org/files/dist/jquery.validate.min.js"></script>
+        <script src="http://jqueryvalidation.org/files/dist/additional-methods.min.js"></script>
+        <script src="https://code.jquery.com/ui/jquery-ui-git.js"></script>
+
+        <script src="rules.js">
+        </script>
+
+    </head>
+
+    <body>
+        <!-- nav bar stuff -->
+
+        <div class="sideBar boxLeft">
+            <div>            
+                <ul class="nav">
+                    <li class="nav"><a class="nav" href="/~anevers/index.html">Index</a></li>
+                    <li class="nav"><a class="nav" href="/~anevers/part5/hw5.html">HW5</a></li>
+                    <li class="nav"><a class="nav" href="/~anevers/part6/hw6.html">HW6</a></li>
+                    <li class="nav"><a class="nav" href="/~anevers/part7/hw4.html">HW7</a></li>
+                    <li class="nav"><a class="nav" href="/~anevers/part8/hw8.html">HW8</a></li>
+                    <li class="nav"><a class="nav" href="/~anevers/part9/hw9.html">HW9</a></li>
+                    <li class="nav"><a class="nav" href="/~anevers/contact.html">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- end nav bar -->
+
+        <div id="container">
+            <div id="content">
+                <div class="post">
+
+                    <h1>Scrabble Mini Game</h1>
+
+                    <!-- board with tiles -->
+
+                    <div id ="board">
+
+                        <div class="droppable">
+                            <img src="Scrabble_board/triple_word_square.png" alt="tripleword">
+                        </div><div class="droppable">
+                            <img src="Scrabble_board/plain_square.png" alt="plain">
+                        </div><div class="droppable">
+                            <img src="Scrabble_board/plain_square.png" alt="plain">
+                        </div><div class="droppable">
+                            <img src="Scrabble_board/plain_square.png" alt="plain">
+                        </div><div class="droppable">
+                            <img src="Scrabble_board/double_letter_square.png" alt="doubleletter">
+                        </div><div class="droppable">
+                            <img src="Scrabble_board/plain_square.png" alt="plain">
+                        </div><div class="droppable">
+                            <img src="Scrabble_board/plain_square.png" alt="plain">
+                        </div>
+
+                    </div>
+
+                    <br>
+                    <br>
+                    
+                    <!-- empty rack-- tiles get generated from document ready function -->
+
+                    <div id="rack">
+                    </div>
+
+                    <div id="score">
+                        <p>Score: 0</p>
+                    </div>
+                    <!-- style the score tracker better later -->
+                    
+                    <!-- maybe this should be renamed later -->
+                    <button onClick="Deal()">Shuffle</button>
+                    
+                </div>
+            </div>
+        </div>
+
+        <!-- css for sticky footer is from http://www.lwis.net/journal/2008/02/08/pure-css-sticky-footer/ tutorial -->
+
+        <div id="footer"> &copy; copyright 2015 Alex Nevers, all rights reserved. 
+        </div>
+    </body>
+
+</html>
